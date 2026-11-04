@@ -104,7 +104,37 @@ SMB and NTFS permissions should follow the principle of least privilege.
 
 ## 7. Evidence
 
-Screenshots documenting the configuration, file access, PowerShell verification, and reconnection test will be stored in the `screenshots` directory.
+## 7. Evidence
+
+### 1. Network Drive Configuration
+Configured the M: drive to connect to the shared folder on DC01.
+
+![Network Drive Configuration](screenshots/01-drive-configuration.png)
+
+### 2. Mapped Network Drive
+Verified that the shared folder appeared as drive M: in Windows 11 File Explorer.
+
+![Mapped Network Drive](screenshots/02-mapped-drive.png)
+
+### 3. File Creation Test
+Created a test document through the mapped network drive to verify write access.
+
+![File Creation](screenshots/03-file-creation.png)
+
+### 4. Standard User Access Verification
+Verified that the shared folder was accessible using the standard user account and tested file creation.
+
+![File Access Verification](screenshots/04-file-access-verification.png)
+
+### 5. PowerShell SMB Verification
+Executed Get-SmbMapping and confirmed that the mapped drive reported Status: OK.
+
+![PowerShell Verification](screenshots/05-powershell-verification.png)
+
+### 6. Persistent Network Drive Connection
+Signed out and signed back into Windows 11, confirming that the mapped drive remained accessible.
+
+![Reconnection Test](screenshots/06-reconnection-test.png)
 
 ---
 
